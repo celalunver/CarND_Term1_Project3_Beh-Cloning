@@ -26,6 +26,7 @@ My project includes the following files:
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network (i have only free github service and i couldn't upload this file since this file is around 200 MB (even 142 MB after zipping). I'm expecting my fellow reviewer to show me a way to share this file, i.e. dropbox, google drive etc.) 
 * writeup_report.md summarizing the results
+* run30.mp4 the video showing how simulator behaves with my model.
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously by executing 
@@ -156,7 +157,7 @@ Then, i decided to have more data, with the specific section of the track. i hav
 
 Finally, i have decided that instead of a part of a track i have to add full track record to the existing data, which seems more logical because i maybe only adding some inconsistent, only a part of a track to add more noise instead of a useful data. I have added 1 full track-1 record to the data and i have run it. Now, after more than 2,5 weeks of trial and error, i'm at the same point. The car is leaving the path whenever it sees the paved way after the bridge.
 
-For once though, the car left the track, drive all the way thru paved way and got back to track. I wish i have saved that model and sent it to you but i didn't because i thought things would have got better with the more data i have introduced.
+For once though, the car left the track, drive all the way thru paved way and got back to track. I wish i have saved that model and sent it to you but i didn't because i thought things would have got much better with the more data i have introduced.
 
 ##### 3.1 Observations
 
@@ -165,6 +166,7 @@ For once though, the car left the track, drive all the way thru paved way and go
 3 - Changing of batch_size has sometimes considerable effect on the result (batch_sizss of 32,64,128 and 256 tested)
 4 - I also played with validation_split, which has not big impact on the results (tests done with 20%, 25% and 30%)
 5 - The max number of input images was 60.000 which is a good number. If suggested, i can add more data but it seems no impact after this point, the network more or less behaved same. 
+6 - 10 to 15 range seems ideal for number of epochs. I can say 5 is too less, and 20 is waste of time.
 
 
 #### 4. What can be done next
